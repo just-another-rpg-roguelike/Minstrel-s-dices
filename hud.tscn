@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://dweyfalnkc18p"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="HealthLabel" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 14.0
+offset_right = 96.0
+offset_bottom = 37.0
+text = "Health (100/100)"
+vertical_alignment = 1
+
+[node name="CharismaLabel" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 82.0
+offset_bottom = 62.0
+text = "Charisma (50%)"
+
+[node name="Karma" type="Label" parent="."]
+offset_left = 9.0
+offset_top = 63.0
+offset_right = 83.0
+offset_bottom = 86.0
+text = "Karma  (50%)"
+
+[node name="Encounter" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.0
+offset_top = -92.0
+offset_right = 33.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Character" type="VBoxContainer" parent="Encounter"]
+layout_mode = 2
+
+[node name="Nombre" type="Label" parent="Encounter/Character"]
+layout_mode = 2
+text = "Nombre del muchachito"
+
+[node name="AffinityLabel" type="Label" parent="Encounter/Character"]
+layout_mode = 2
+text = "Affinity (0%)"
+horizontal_alignment = 1
+
+[node name="Message" type="Label" parent="Encounter/Character"]
+layout_mode = 2
+text = "Mensaje del personaje"
+
+[node name="Choices" type="CenterContainer" parent="Encounter"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Encounter/Choices"]
+layout_mode = 2
+
+[node name="Choice 1" type="Label" parent="Encounter/Choices/HBoxContainer"]
+layout_mode = 2
+text = "Club"
+
+[node name="Choice 2" type="Label" parent="Encounter/Choices/HBoxContainer"]
+layout_mode = 2
+text = "Spades"
+
+[node name="Dice Selector" type="VBoxContainer" parent="."]
+offset_left = 148.0
+offset_top = 607.0
+offset_right = 286.0
+offset_bottom = 684.0
+
+[node name="Dice 1" type="Label" parent="Dice Selector"]
+layout_mode = 2
+text = "Dice Probs: 50/50"
+
+[node name="Dice 2" type="Label" parent="Dice Selector"]
+layout_mode = 2
+text = "Dice Result: 70/30"
+
+[node name="Dice 3" type="Label" parent="Dice Selector"]
+layout_mode = 2
+text = "Dice Result: 30/70"
