@@ -1,10 +1,12 @@
 - ### Player
-	- **Name**: [String] The name of the player.
-	- **Health**: [Integer] The player's health (range from 0 to 100).
-	- **Charisma**: [Integer] The player's charisma (range from 0 to 100).
-	- **CurrentEncounter**: [Character] The current encounter of the player.
+
+  - **Name**: [String] The name of the player.
+  - **Health**: [Integer] The player's health (range from 0 to 100).
+  - **Charisma**: [Integer] The player's charisma (range from 0 to 100).
+  - **CurrentEncounter**: [Character] The current encounter of the player.
 
 - ### Character
+
   - **Name**: [String] The name of the character.
   - **Description**: [String] A brief description of the character.
   - **Image**: [String/Path] Path to the character's image file.
@@ -13,10 +15,12 @@
   - **CurrentEvent**: [Event] The current event associated with the character.
 
 - ### Event
+
   - **Description**: [String] Description of the event.
   - **Choices**: [Choice] A list of choices
 
 - ### Choice
+
   - **Symbol**: [String] The symbol representing the choice (Clubs or Spades).
   - **OutcomeDescription**: [String] Description of the outcome.
   - **RelationshipChange**: [Integer] The change in relationship meter.
@@ -25,6 +29,5 @@
   - **NextEvent**: [Event] The next event if Choice is selected.
 
 - ### Dice
-  - **Type**: [String] The type of dice (e.g., 50/50, 30/70).
   - **ProbabilityClubs**: [Float] The probability of landing on Clubs.
   - **ProbabilitySpades**: [Float] The probability of landing on Spades.
