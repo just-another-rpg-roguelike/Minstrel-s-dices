@@ -1,8 +1,8 @@
 - ### Player
-    - **Name**: [String] The name of the player.
-    - **Health**: [Integer] The player's health (range from 0 to 100).
-    - **Charisma**: [Integer] The player's charisma (range from 0 to 100).
-    - **CurrentEncounter**: [Character] The current encounter of the player.
+	- **Name**: [String] The name of the player.
+	- **Health**: [Integer] The player's health (range from 0 to 100).
+	- **Charisma**: [Integer] The player's charisma (range from 0 to 100).
+	- **CurrentEncounter**: [Character] The current encounter of the player.
 
 - ### Character
   - **Name**: [String] The name of the character.
