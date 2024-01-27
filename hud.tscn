@@ -1,3 +1,12 @@
+[gd_scene load_steps=8 format=3 uid="uid://ch06lcouq60oi"]
+
+[ext_resource type="Texture2D" uid="uid://2or3fh8x4c6k" path="res://assets/heart-empty.png" id="1_byw6v"]
+[ext_resource type="Script" path="res://scripts/HBoxContainer.gd" id="1_rs8ti"]
+[ext_resource type="Texture2D" uid="uid://evj37fbn7ehm" path="res://assets/heart-transitionpng.png" id="2_5kj0x"]
+[ext_resource type="Texture2D" uid="uid://skqqmfe8mmhx" path="res://assets/lucky-empty.png" id="3_add7g"]
+[ext_resource type="Texture2D" uid="uid://tpda0mlcuqvv" path="res://assets/lucky-progress.png" id="4_y1mwq"]
+[ext_resource type="Texture2D" uid="uid://b1n2dp6cmjd8n" path="res://assets/karma-empty.png" id="6_na48e"]
+[ext_resource type="Texture2D" uid="uid://clbfqj4q18lj1" path="res://assets/karma-prog.png" id="7_fye03"]
 [gd_scene load_steps=5 format=3 uid="uid://dweyfalnkc18p"]
 
 [ext_resource type="Script" path="res://DiceResultOutputText.gd" id="1_8jd2g"]
@@ -8,27 +17,54 @@
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_a0um7")
 
-[node name="HealthLabel" type="Label" parent="."]
-offset_left = 8.0
-offset_top = 14.0
-offset_right = 96.0
-offset_bottom = 37.0
-text = "Health (100/100)"
-vertical_alignment = 1
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 140.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="CharismaLabel" type="Label" parent="."]
-offset_left = 8.0
-offset_top = 39.0
-offset_right = 82.0
-offset_bottom = 62.0
-text = "Charisma (50%)"
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+script = ExtResource("1_rs8ti")
 
-[node name="Karma" type="Label" parent="."]
-offset_left = 9.0
-offset_top = 63.0
-offset_right = 83.0
-offset_bottom = 86.0
-text = "Karma  (50%)"
+[node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer"]
+process_mode = 2
+layout_mode = 2
+min_value = 1.0
+step = 10.0
+page = 2.0
+value = 51.0
+fill_mode = 3
+texture_under = ExtResource("1_byw6v")
+texture_progress = ExtResource("2_5kj0x")
+
+[node name="CharismaBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer"]
+process_mode = 2
+layout_mode = 2
+min_value = 1.0
+step = 10.0
+page = 1.0
+value = 51.0
+fill_mode = 3
+texture_under = ExtResource("3_add7g")
+texture_progress = ExtResource("4_y1mwq")
+
+[node name="KarmaBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer"]
+process_mode = 2
+layout_mode = 2
+min_value = 1.0
+step = 10.0
+page = 2.0
+value = 51.0
+fill_mode = 3
+texture_under = ExtResource("6_na48e")
+texture_progress = ExtResource("7_fye03")
 
 [node name="Encounter" type="VBoxContainer" parent="."]
 anchors_preset = 14
@@ -74,6 +110,16 @@ text = "Club"
 layout_mode = 2
 text = "Spades"
 
+<<<<<<< HEAD
+[node name="Dice Selector" type="VBoxContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -77.0
+grow_horizontal = 2
+grow_vertical = 0
+=======
 [node name="DiceSelectorContainer" type="HBoxContainer" parent="."]
 anchors_preset = -1
 anchor_top = 0.761
@@ -85,6 +131,7 @@ grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 script = ExtResource("2_rfdyf")
+>>>>>>> main
 
 [node name="Dice Button" type="Button" parent="."]
 offset_left = 629.0
