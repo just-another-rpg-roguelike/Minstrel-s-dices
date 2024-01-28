@@ -1,126 +1,132 @@
 [
-	{
-		"ch": "1|G",
-		"events": [
-			{
-				"name": "Event2",
-				"choises": [
-					{
-						"description": "description text...",
-						"healt": [4, 15],
-						"charysm": [20, 30],
-						"karma": [-5, 10],
-						"affinity": 4,
-					},{
-						"description": "description text...",
-						"healt": [-15, -5],
-						"charysm": [-20, -10],
-						"karma": [-30, -20],
-						"affinity": -5,
-					}
-				],
-				"description": "too much text 2"
-			},
-			{
-				"name": "Event3",
-				"choises": [
-					{
-						"description": "description text...",
-						"healt": [4, 15],
-						"charysm": [20, 30],
-						"karma": [-5, 10],
-						"affinity": 10,
-					},{
-						"description": "description text...",
-						"healt": [-15, -5],
-						"charysm": [-20, -10],
-						"karma": [-30, -20],
-						"affinity": -16,
-					}
-				],
-				"description": "too much text 3"
-			},
-						{
-				"name": "Event5",
-								"choises": [
-					{
-						"description": "description text...",
-						"healt": [4, 15],
-						"charysm": [20, 30],
-						"karma": [-5, 10],
-						"affinity": -40,
-					},{
-						"description": "description text...",
-						"healt": [-15, -5],
-						"charysm": [-20, -10],
-						"karma": [-30, -20],
-						"affinity": 21,
-					}
-				],
-				"description": "too much text 5"
-			}
-		]
-	},
-	{
-		"ch": "2|R",
-		"events": [
-			{
-				"name": "Event1",
-				"choises": [
-					{
-						"description": "description text...",
-						"healt": [4, 15],
-						"charysm": [20, 30],
-						"karma": [-5, 10],
-						"affinity": -14,
-					},{
-						"description": "description text...",
-						"healt": [-15, -5],
-						"charysm": [-20, -10],
-						"karma": [-30, -20],
-						"affinity": -54
-					}
-				],
-				"description": "too much text 1"
-			},
-			{
-				"name": "Event4",
-				"choises": [
-					{
-						"description": "description text...",
-						"healt": [4, 15],
-						"charysm": [20, 30],
-						"karma": [-5, 10],
-						"affinity": 12,
-					},{
-						"description": "description text...",
-						"healt": [-15, -5],
-						"charysm": [-20, -10],
-						"karma": [-30, -20],
-						"affinity": 20,
-					}
-				],
-				"description": "too much text 4"
-			},
-						{
-				"name": "Event6",
-				"choises": [
-					{
-						"description": "description text...",
-						"healt": [4, 15],
-						"charysm": [20, 30],
-						"karma": [-5, 10],
-						"affinity": -21,
-					},{
-						"description": "description text...",
-						"healt": [-15, -5],
-						"charysm": [-20, -10],
-						"karma": [-30, -20],
-						"affinity": 42,
-					}
-				],
-				"description": "too much text 6"
-			}
-		]
-	}
+  {
+    "ch": "1|G",
+    "events": [
+      {
+        "name": "Event2",
+        "choises": [
+          {
+            "description": "description text...",
+            "healt": [4, 15],
+            "charysm": [20, 30],
+            "karma": [-5, 10],
+            "affinity": 4
+          },
+          {
+            "description": "description text...",
+            "healt": [-15, -5],
+            "charysm": [-20, -10],
+            "karma": [-30, -20],
+            "affinity": -5
+          }
+        ],
+        "description": "too much text 2"
+      },
+      {
+        "name": "Event3",
+        "choises": [
+          {
+            "description": "description text...",
+            "healt": [4, 15],
+            "charysm": [20, 30],
+            "karma": [-5, 10],
+            "affinity": 10
+          },
+          {
+            "description": "description text...",
+            "healt": [-15, -5],
+            "charysm": [-20, -10],
+            "karma": [-30, -20],
+            "affinity": -16
+          }
+        ],
+        "description": "too much text 3"
+      },
+      {
+        "name": "Event5",
+        "choises": [
+          {
+            "description": "description text...",
+            "healt": [4, 15],
+            "charysm": [20, 30],
+            "karma": [-5, 10],
+            "affinity": -40
+          },
+          {
+            "description": "description text...",
+            "healt": [-15, -5],
+            "charysm": [-20, -10],
+            "karma": [-30, -20],
+            "affinity": 21
+          }
+        ],
+        "description": "too much text 5"
+      }
+    ]
+  },
+  {
+    "ch": "2|R",
+    "events": [
+      {
+        "name": "Event1",
+        "choises": [
+          {
+            "description": "description text...",
+            "healt": [4, 15],
+            "charysm": [20, 30],
+            "karma": [-5, 10],
+            "affinity": -14
+          },
+          {
+            "description": "description text...",
+            "healt": [-15, -5],
+            "charysm": [-20, -10],
+            "karma": [-30, -20],
+            "affinity": -54
+          }
+        ],
+        "description": "too much text 1"
+      },
+      {
+        "name": "Event4",
+        "choises": [
+          {
+            "description": "description text...",
+            "healt": [4, 15],
+            "charysm": [20, 30],
+            "karma": [-5, 10],
+            "affinity": 12
+          },
+          {
+            "description": "description text...",
+            "healt": [-15, -5],
+            "charysm": [-20, -10],
+            "karma": [-30, -20],
+            "affinity": 20
+          }
+        ],
+        "description": "too much text 4"
+      },
+      {
+        "name": "Event6",
+        "choises": [
+          {
+            "description": "description text...",
+            "healt": [4, 15],
+            "charysm": [20, 30],
+            "karma": [-5, 10],
+            "affinity": -21
+          },
+          {
+            "description": "description text...",
+            "healt": [-15, -5],
+            "charysm": [-20, -10],
+            "karma": [-30, -20],
+            "affinity": 42
+          }
+        ],
+        "description": "too much text 6"
+      }
+    ]
+  }
 ]
