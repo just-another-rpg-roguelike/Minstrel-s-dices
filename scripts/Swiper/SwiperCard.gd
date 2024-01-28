@@ -18,5 +18,5 @@ func _input(event):
 	if event is InputEventMouseButton:
 			print("MouseButton Event o.o")
 			return
-		_:
+	else:
 			return

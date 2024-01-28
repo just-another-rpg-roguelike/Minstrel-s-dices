@@ -1,6 +1,6 @@
 class_name DiceButton extends Button
 
-const Dice = preload("res://Dice.gd")
+const Dice = preload("res://scripts/dice/Dice.gd")
 var dice:Dice
 
 func _init(p_dice:Dice = Dice.new(0.5,0.5)):
