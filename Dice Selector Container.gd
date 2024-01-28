@@ -11,8 +11,3 @@ func _ready():
 		var symbols = ["♣️", "♠️"]
 		button.text = symbols[randi()%symbols.size()]
 		add_child(button)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
