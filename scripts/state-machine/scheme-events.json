@@ -1,0 +1,42 @@
+[
+	{
+		"ch": "1|G",
+		"events": [
+			{
+				"name": "Event2",
+				"choises": [],
+				"description": "too much text 2"
+			},
+			{
+				"name": "Event3",
+				"choises": [],
+				"description": "too much text 3"
+			},
+						{
+				"name": "Event5",
+				"choises": [],
+				"description": "too much text 5"
+			}
+		]
+	},
+	{
+		"ch": "2|R",
+		"events": [
+			{
+				"name": "Event1",
+				"choises": [],
+				"description": "too much text 1"
+			},
+			{
+				"name": "Event4",
+				"choises": [],
+				"description": "too much text 4"
+			},
+						{
+				"name": "Event6",
+				"choises": [],
+				"description": "too much text 6"
+			}
+		]
+	}
+]

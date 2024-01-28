@@ -1,16 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://dweyfalnkc18p"]
+[gd_scene load_steps=12 format=3 uid="uid://dweyfalnkc18p"]
 
 [ext_resource type="Script" path="res://DiceResultOutputText.gd" id="1_8jd2g"]
 [ext_resource type="Script" path="res://hud.gd" id="1_a0um7"]
-[ext_resource type="Texture2D" path="res://assets/heart-empty.png" id="1_byw6v"]
+[ext_resource type="Texture2D" uid="uid://2or3fh8x4c6k" path="res://assets/heart-empty.png" id="1_byw6v"]
 [ext_resource type="Script" path="res://scripts/HBoxContainer.gd" id="1_rs8ti"]
-[ext_resource type="Texture2D" path="res://assets/heart-transitionpng.png" id="2_5kj0x"]
+[ext_resource type="Texture2D" uid="uid://evj37fbn7ehm" path="res://assets/heart-transitionpng.png" id="2_5kj0x"]
 [ext_resource type="Script" path="res://DiceButton.gd" id="2_qw35b"]
 [ext_resource type="Script" path="res://Dice Selector Container.gd" id="2_rfdyf"]
-[ext_resource type="Texture2D" path="res://assets/lucky-empty.png" id="3_add7g"]
-[ext_resource type="Texture2D" path="res://assets/lucky-progress.png" id="4_y1mwq"]
-[ext_resource type="Texture2D" path="res://assets/karma-empty.png" id="6_na48e"]
-[ext_resource type="Texture2D" path="res://assets/karma-prog.png" id="7_fye03"]
+[ext_resource type="Texture2D" uid="uid://skqqmfe8mmhx" path="res://assets/lucky-empty.png" id="3_add7g"]
+[ext_resource type="Texture2D" uid="uid://tpda0mlcuqvv" path="res://assets/lucky-progress.png" id="4_y1mwq"]
+[ext_resource type="Texture2D" uid="uid://b1n2dp6cmjd8n" path="res://assets/karma-empty.png" id="6_na48e"]
+[ext_resource type="Texture2D" uid="uid://clbfqj4q18lj1" path="res://assets/karma-prog.png" id="7_fye03"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_a0um7")
