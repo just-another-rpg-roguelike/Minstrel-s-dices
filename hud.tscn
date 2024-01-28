@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dweyfalnkc18p"]
+[gd_scene load_steps=13 format=3 uid="uid://dweyfalnkc18p"]
 
 [ext_resource type="Script" path="res://DiceResultOutputText.gd" id="1_8jd2g"]
 [ext_resource type="Script" path="res://hud.gd" id="1_a0um7"]
@@ -11,27 +11,42 @@
 [ext_resource type="Texture2D" uid="uid://tpda0mlcuqvv" path="res://assets/lucky-progress.png" id="4_y1mwq"]
 [ext_resource type="Texture2D" uid="uid://b1n2dp6cmjd8n" path="res://assets/karma-empty.png" id="6_na48e"]
 [ext_resource type="Texture2D" uid="uid://clbfqj4q18lj1" path="res://assets/karma-prog.png" id="7_fye03"]
+[ext_resource type="PackedScene" uid="uid://dwwsv1bhfrl8v" path="res://scenes/encounter.tscn" id="10_bk7g5"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_a0um7")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-anchors_preset = 10
+[node name="Dice Button" type="Button" parent="."]
+offset_left = -897.0
+offset_top = 97.0
+offset_right = -177.0
+offset_bottom = 128.0
+text = "♣️"
+script = ExtResource("2_qw35b")
+
+[node name="mainWrapper" type="VBoxContainer" parent="."]
+anchors_preset = 15
 anchor_right = 1.0
-offset_bottom = 140.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = 3.0
 grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="mainWrapper"]
+layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="mainWrapper/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 15
 script = ExtResource("1_rs8ti")
 
-[node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer"]
+[node name="HealthBar" type="TextureProgressBar" parent="mainWrapper/MarginContainer/HBoxContainer"]
 process_mode = 2
 layout_mode = 2
 min_value = 1.0
@@ -42,7 +57,7 @@ fill_mode = 3
 texture_under = ExtResource("1_byw6v")
 texture_progress = ExtResource("2_5kj0x")
 
-[node name="CharismaBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer"]
+[node name="CharismaBar" type="TextureProgressBar" parent="mainWrapper/MarginContainer/HBoxContainer"]
 process_mode = 2
 layout_mode = 2
 min_value = 1.0
@@ -53,7 +68,7 @@ fill_mode = 3
 texture_under = ExtResource("3_add7g")
 texture_progress = ExtResource("4_y1mwq")
 
-[node name="KarmaBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer"]
+[node name="KarmaBar" type="TextureProgressBar" parent="mainWrapper/MarginContainer/HBoxContainer"]
 process_mode = 2
 layout_mode = 2
 min_value = 1.0
@@ -64,92 +79,24 @@ fill_mode = 3
 texture_under = ExtResource("6_na48e")
 texture_progress = ExtResource("7_fye03")
 
-[node name="Encounter" type="VBoxContainer" parent="."]
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -52.0
-offset_bottom = 52.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
+[node name="Encounter" parent="mainWrapper" instance=ExtResource("10_bk7g5")]
+layout_mode = 2
 
-[node name="Character" type="VBoxContainer" parent="Encounter"]
+[node name="Dice Result Container" type="HBoxContainer" parent="mainWrapper"]
 layout_mode = 2
 alignment = 1
 
-[node name="Nombre" type="Label" parent="Encounter/Character"]
-layout_mode = 2
-text = "Nombre del muchachito"
-horizontal_alignment = 1
-
-[node name="AffinityLabel" type="Label" parent="Encounter/Character"]
-layout_mode = 2
-text = "Affinity (0%)"
-horizontal_alignment = 1
-
-[node name="Message" type="Label" parent="Encounter/Character"]
-layout_mode = 2
-text = "Mensaje del personaje"
-horizontal_alignment = 1
-
-[node name="Choices" type="CenterContainer" parent="Encounter"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Encounter/Choices"]
-layout_mode = 2
-
-[node name="Choice 1" type="Label" parent="Encounter/Choices/HBoxContainer"]
-layout_mode = 2
-text = "Club"
-
-[node name="Choice 2" type="Label" parent="Encounter/Choices/HBoxContainer"]
-layout_mode = 2
-text = "Spades"
-
-[node name="Dice Selector" type="VBoxContainer" parent="."]
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -77.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="DiceSelectorContainer" type="HBoxContainer" parent="."]
-anchors_preset = -1
-anchor_top = 0.761
-anchor_right = 1.0
-anchor_bottom = 0.836
-offset_top = -0.252014
-offset_bottom = -0.152039
-grow_horizontal = 2
-grow_vertical = 0
-alignment = 1
-script = ExtResource("2_rfdyf")
-
-[node name="Dice Button" type="Button" parent="."]
-offset_left = 629.0
-offset_top = 352.0
-offset_right = 668.0
-offset_bottom = 383.0
-text = "♣️"
-script = ExtResource("2_qw35b")
-
-[node name="Dice Result Container" type="HBoxContainer" parent="."]
-offset_left = 137.0
-offset_top = 646.0
-offset_right = 282.0
-offset_bottom = 669.0
-
-[node name="Dice Result Label" type="Label" parent="Dice Result Container"]
+[node name="Dice Result Label" type="Label" parent="mainWrapper/Dice Result Container"]
 layout_mode = 2
 text = "Dice Result:"
 
-[node name="Dice Result" type="Label" parent="Dice Result Container"]
+[node name="Dice Result" type="Label" parent="mainWrapper/Dice Result Container"]
 layout_mode = 2
 text = "<Null>"
 script = ExtResource("1_8jd2g")
 
-[connection signal="pressed" from="Dice Button" to="Dice Result Container/Dice Result" method="_on_dice_button_pressed"]
+[node name="DiceSelectorContainer" type="HBoxContainer" parent="mainWrapper"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+alignment = 1
+script = ExtResource("2_rfdyf")
