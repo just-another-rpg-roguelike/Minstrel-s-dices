@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwwsv1bhfrl8v"]
+
+[ext_resource type="Texture2D" uid="uid://cdqxbmjbatj56" path="res://art/characters/merchant_cat.png" id="1_5rakq"]
+
+[node name="Encounter" type="VBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 296.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Character" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="Nombre" type="Label" parent="Character"]
+layout_mode = 2
+text = "Nombre del muchachito"
+horizontal_alignment = 1
+
+[node name="AffinityLabel" type="Label" parent="Character"]
+layout_mode = 2
+text = "Affinity (0%)"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Character"]
+layout_mode = 2
+theme_override_constants/margin_left = 250
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 250
+theme_override_constants/margin_bottom = 50
+
+[node name="TextureRect" type="TextureRect" parent="Character/MarginContainer"]
+clip_contents = true
+layout_mode = 2
+texture = ExtResource("1_5rakq")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Message" type="Label" parent="Character"]
+layout_mode = 2
+text = "Mensaje del personaje"
+horizontal_alignment = 1
+
+[node name="Choices" type="CenterContainer" parent="."]
+layout_mode = 2
+
+[node name="ChoiceContainer" type="HBoxContainer" parent="Choices"]
+layout_mode = 2
+
+[node name="Choice 1" type="Label" parent="Choices/ChoiceContainer"]
+layout_mode = 2
+text = "Club"
+
+[node name="Choice 2" type="Label" parent="Choices/ChoiceContainer"]
+layout_mode = 2
+text = "Spades"
