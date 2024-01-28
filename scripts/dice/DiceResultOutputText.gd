@@ -1,6 +1,6 @@
 extends Label
 
-var Dice = preload("res://Dice.gd")
+var Dice = preload("res://scripts/dice/Dice.gd")
 @onready var diceSelectorContainer = get_node("/root/HUD/mainWrapper/DiceSelectorContainer")
 
 # Called when the node enters the scene tree for the first time.
